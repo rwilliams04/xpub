@@ -125,7 +125,7 @@ config = {
         "save (save it to a file)",
         "send (send it off to the `xromm` server)",
         "quit (just discard it)",
-        "transfer file (using globus)
+        "transfer file (using globus)"
     ],
     "example": "quit (just discard it)",
     "require": True,
