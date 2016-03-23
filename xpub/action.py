@@ -89,12 +89,12 @@ def send(results):
     elif resource is 'trial':
         path += results['data']['study'] + '/trials/'
 
-    url = 'http://xromm.rcc.uchicago/api/v{}/{}'.format(version, path)
+    url = 'localhost:8081/studies/teststudy'
     print "sending to", url
 
     # comment out next two lines when backend service in place!
-    url = "http://httpbin.org/post"     
-    print "\n... actually, we're sending to", url, "for testing purposes!"
+    #url = "http://httpbin.org/post"     
+    #print "\n... actually, we're sending to", url, "for testing purposes!"
     resp = requests.post(url, data=json.dumps(results))
     print(resp.text)
     if os.name == 'nt':                             #check for Windows
